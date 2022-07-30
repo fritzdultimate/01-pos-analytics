@@ -1,18 +1,12 @@
 import { defineNuxtConfig } from 'nuxt';
+import postcss from "./postcss.config.js";
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
-export default {
-  buildModules: [
-    '@nuxt/postcss8',
-    // ...
-  ],
+// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+export default defineNuxtConfig({
+  css: ['~/assets/css/main.css'],
   build: {
     postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
+      postcssOptions: postcss,
     },
-  },
-  css: ['~/assets/css/main.css'],
-}
+  }
+})
