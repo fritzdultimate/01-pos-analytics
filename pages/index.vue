@@ -19,6 +19,7 @@
     >
       Add Record
     </button>
+    <!-- <font-awesome-icon :icon="['fab', 'linkedin']"/> -->
   </div>
 </template>
 
